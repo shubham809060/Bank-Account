@@ -1,0 +1,53 @@
+import java.util.Scanner;
+class bank
+{
+    static Scanner sc=new Scanner(System.in);
+    String Name;
+    double AccountNumber;
+    int balance,money,withdraw;
+    void method()
+    {
+    System.out.println("enter name:");
+    Name=sc.nextLine();
+    System.out.println("enter account number:");
+    AccountNumber=sc.nextInt();
+    System.out.println("enter balance amount:");
+    balance=sc.nextInt();
+    }
+void display()
+{
+    System.out.println("Name is:"+Name);
+    System.out.println("Account number is:"+AccountNumber);
+    System.out.println("Balance is:"+balance);
+}
+void deposite()
+{
+    if(balance<1000)
+    {
+        System.out.println("Please deposite money:");
+        int money=sc.nextInt();
+        money=balance+money;
+        System.out.println("balance after deposite:"+money);
+    }
+}
+void withdraw()
+{
+    if(balance>1000)
+    {
+        System.out.println("you can withdraw money:");
+        withdraw=sc.nextInt();
+        withdraw=balance-withdraw;
+        System.out.println("balance after withdraw:"+withdraw);
+    }
+}
+
+public static void main(String[] args) {
+bank b1=new bank();
+b1.method();
+b1.display();
+b1.deposite();
+b1.withdraw();
+    
+}
+
+}
